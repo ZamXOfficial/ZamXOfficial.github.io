@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d0a">
+  <meta name="description" content="PROJECT ZENITH — портал публикации проекта.">
+  <title>PROJECT ZENITH — Script Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="topbar wrap">
+    <a class="brand" href="#top" aria-label="Project Zenith — главная">
+      <span class="brand-symbol">Z<span></span></span>
+      <span class="brand-name">PROJECT <b>ZENITH</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#features">Возможности</a>
+      <a href="#release">Релиз</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-status" href="#release"><span class="status-dot"></span> v1.0.0 <span class="status-arrow">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> ROBLOX SCRIPT PROJECT <span class="eyebrow-version">/ 001</span></div>
+        <h1>PLAY<br>BEYOND<br><span>LIMITS.</span></h1>
+        <p class="hero-description">PROJECT ZENITH — единая точка доступа к проекту. Здесь всегда можно найти актуальную публичную версию и последние новости.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#release">ПОЛУЧИТЬ СКРИПТ <span>↘</span></a>
+          <a class="button button-secondary" href="#features">О ПРОЕКТЕ</a>
+        </div>
+        <div class="hero-footnote"><span class="tiny-check">✓</span> БЕСПЛАТНО И БЕЗ ЛИЧНЫХ СООБЩЕНИЙ</div>
+      </div>
+
+      <div class="hero-art" aria-label="Графическая эмблема Project Zenith">
+        <div class="art-grid"></div>
+        <div class="art-ring ring-outer"></div>
+        <div class="art-ring ring-inner"></div>
+        <div class="art-cross cross-one"></div><div class="art-cross cross-two"></div>
+        <div class="zenith-mark"><span>Z</span><i></i></div>
+        <div class="art-label label-top"><span class="status-dot"></span> SYSTEM / READY</div>
+        <div class="art-label label-bottom">ZENITH ACCESS NODE <b>01</b></div>
+        <div class="art-coordinate">N 42° 08'  E 19° 44'</div>
+      </div>
+    </section>
+
+    <section class="quick-info wrap" aria-label="Информация о релизе">
+      <div class="quick-item"><span class="quick-label">PROJECT</span><strong>ZENITH</strong></div>
+      <div class="quick-item"><span class="quick-label">LATEST RELEASE</span><strong>v1.0.0</strong></div>
+      <div class="quick-item"><span class="quick-label">ACCESS</span><strong class="green-text">PUBLIC / FREE</strong></div>
+      <div class="quick-item quick-item-last"><span class="quick-label">STATUS</span><strong><span class="status-dot"></span> ONLINE</strong></div>
+    </section>
+
+    <section class="section wrap" id="release">
+      <div class="section-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> 01 / PUBLIC RELEASE</div>
+        <div class="heading-row"><h2>GET THE <span>SCRIPT.</span></h2><p>Последняя публичная версия<br>PROJECT ZENITH</p></div>
+      </div>
+      <div class="release-card">
+        <div class="release-topline"><div class="release-name"><span class="file-icon">{ }</span><div><strong>ZENITH.LUA</strong><small>PUBLIC BUILD · SOURCE TEXT</small></div></div><span class="release-version">VERSION 1.0.0</span></div>
+        <div class="code-panel">
+          <div class="code-panel-head"><span><i></i> SCRIPT PREVIEW</span><span>TEXT / UTF-8</span></div>
+          <pre id="scriptOutput"><span class="placeholder">-- Нажми «Показать скрипт», чтобы загрузить публичную версию.
+-- Файл публикации: script.txt</span></pre>
+        </div>
+        <div class="release-actions">
+          <button class="button button-primary" id="revealBtn">ПОКАЗАТЬ СКРИПТ <span>↓</span></button>
+          <button class="button button-copy" id="copyBtn" disabled><span class="copy-symbol">▣</span> КОПИРОВАТЬ</button>
+          <p class="release-hint" id="status" role="status">Код будет доступен здесь после загрузки.</p>
+        </div>
+      </div>
+      <p class="fine-print">Публикуй только материалы, которые ты имеешь право распространять. Не добавляй в открытый файл пароли, токены и другие секретные данные.</p>
+    </section>
+
+    <section class="section wrap" id="features">
+      <div class="section-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> 02 / WHY ZENITH</div>
+        <div class="heading-row"><h2>BUILT TO BE <span>SIMPLE.</span></h2><p>Ничего лишнего.<br>Только нужное.</p></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-top"><span>01</span><span class="feature-icon">↗</span></div><h3>БЫСТРЫЙ ДОСТУП</h3><p>Получай актуальную публикацию самостоятельно, когда тебе удобно.</p></article>
+        <article class="feature-card"><div class="feature-top"><span>02</span><span class="feature-icon">⟳</span></div><h3>ПРОСТЫЕ ОБНОВЛЕНИЯ</h3><p>Новая версия появляется после замены содержимого файла публикации.</p></article>
+        <article class="feature-card"><div class="feature-top"><span>03</span><span class="feature-icon">⌘</span></div><h3>ЧИСТЫЙ ИНТЕРФЕЙС</h3><p>Лаконичная страница, которая одинаково удобно работает на компьютере и телефоне.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap changelog" id="updates">
+      <div class="section-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> 03 / CHANGELOG</div>
+        <div class="heading-row"><h2>LATEST <span>UPDATE.</span></h2><p>История изменений<br>публичного проекта</p></div>
+      </div>
+      <div class="change-row"><div class="change-tag">v1.0.0</div><div class="change-copy"><strong>Первый публичный релиз</strong><p>Запуск сайта PROJECT ZENITH и публикация первой версии портала.</p></div><div class="change-date">INITIAL RELEASE</div></div>
+    </section>
+
+    <section class="section wrap faq" id="faq">
+      <div class="section-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> 04 / SUPPORT</div>
+        <div class="heading-row"><h2>GOOD TO <span>KNOW.</span></h2><p>Коротко о главном</p></div>
+      </div>
+      <details><summary>Как получить скрипт?<span>＋</span></summary><p>Открой раздел Public Release, нажми «Показать скрипт», а затем «Копировать».</p></details>
+      <details><summary>Как обновить опубликованный текст?<span>＋</span></summary><p>Замени содержимое файла script.txt и повторно опубликуй сайт. Остальные файлы менять не требуется.</p></details>
+      <details><summary>Почему скрипт не отображается локально?<span>＋</span></summary><p>Страница загружает script.txt отдельным запросом. Для проверки открой сайт через хостинг или локальный веб-сервер, а не двойным кликом по index.html.</p></details>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <a class="brand" href="#top"><span class="brand-symbol">Z<span></span></span><span class="brand-name">PROJECT <b>ZENITH</b></span></a>
+    <span class="footer-copy">INDEPENDENT COMMUNITY PROJECT · 2026</span>
+    <a class="back-top" href="#top">НАВЕРХ ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
