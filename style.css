@@ -1105,3 +1105,99 @@ body { background: #050a07; }
   from { transform: translateX(-50%) rotateX(28deg) rotateY(62deg) rotateZ(-25deg); }
   to { transform: translateX(-50%) rotateX(28deg) rotateY(62deg) rotateZ(335deg); }
 }
+
+
+/* ZENITH v6.2 — удаляем прямоугольную панель, оставляем свободную композицию */
+.hero-art {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 470px;
+  min-height: 430px;
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  isolation: isolate;
+}
+.hero-art::before,
+.hero-art::after {
+  content: none !important;
+  display: none !important;
+}
+.panel-background,
+.panel-dots {
+  display: none !important;
+}
+.orbit-scene {
+  position: absolute;
+  inset: 7% 0 6%;
+  overflow: visible !important;
+  z-index: 4;
+}
+.zenith-letter {
+  z-index: 10;
+}
+.orbit-ring {
+  overflow: visible !important;
+}
+.art-cross {
+  opacity: .38;
+}
+.cross-one {
+  top: 15%;
+  left: 5%;
+}
+.cross-two {
+  right: 5%;
+  bottom: 19%;
+}
+.art-label {
+  position: absolute;
+  z-index: 12;
+  white-space: nowrap;
+  text-shadow: 0 1px 8px rgba(0,0,0,.85);
+}
+.label-top {
+  top: 3%;
+  left: 1%;
+}
+.label-bottom {
+  right: 1%;
+  bottom: 4%;
+}
+.art-coordinate {
+  position: absolute;
+  z-index: 12;
+  left: 1%;
+  bottom: 4%;
+  text-shadow: 0 1px 8px rgba(0,0,0,.85);
+}
+@media(min-width:761px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .hero-art {
+    height: 500px;
+  }
+}
+@media(max-width:760px) {
+  .hero-art {
+    height: 330px;
+    min-height: 330px;
+    width: 100%;
+    margin: 0;
+  }
+  .orbit-scene {
+    inset: 4% 0 9%;
+  }
+  .art-label { font-size: 8px; }
+  .art-coordinate { font-size: 7px; }
+  .label-top { top: 0; left: 0; }
+  .label-bottom { bottom: 0; right: 0; }
+  .art-coordinate { bottom: 0; left: 0; }
+  .cross-one { top: 13%; left: 2%; }
+  .cross-two { right: 2%; bottom: 15%; }
+}
