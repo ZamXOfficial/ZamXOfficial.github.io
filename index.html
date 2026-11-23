@@ -9,14 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.1">
+  <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body>
-  <canvas class="background-canvas" id="backgroundCanvas" aria-hidden="true"></canvas>
-  <div class="background-glow glow-one" aria-hidden="true"></div>
-  <div class="background-glow glow-two" aria-hidden="true"></div>
-  <div class="background-grid" aria-hidden="true"></div>
-  <div class="scanline" aria-hidden="true"></div>
+  <div class="ambient-background" aria-hidden="true">
+    <span class="ambient-blob blob-a"></span>
+    <span class="ambient-blob blob-b"></span>
+    <span class="ambient-blob blob-c"></span>
+    <span class="ambient-light"></span>
+  </div>
 
   <header class="topbar wrap">
     <a class="brand" href="#top" aria-label="PROJECT ZENITH — на главную">
@@ -45,22 +46,16 @@
         <div class="hero-footnote"><span class="tiny-check">✓</span> БЕСПЛАТНЫЙ ДОСТУП · БЕЗ ЛИЧНЫХ СООБЩЕНИЙ</div>
       </div>
 
-      <div class="hero-art" aria-label="Анимированная сферическая эмблема ZENITH">
+      <div class="hero-art" aria-label="Эмблема ZENITH с вращающимися трёхмерными орбитами">
         <div class="art-grid"></div>
-        <div class="art-orbit orbit-one"></div>
-        <div class="art-orbit orbit-two"></div>
-        <div class="art-orbit orbit-three"></div>
+        <div class="orbit-scene">
+          <div class="orbit-ring orbit-a"></div>
+          <div class="orbit-ring orbit-b"></div>
+          <div class="orbit-ring orbit-c"></div>
+          <div class="zenith-core"><span>Z</span></div>
+        </div>
         <div class="art-cross cross-one"></div>
         <div class="art-cross cross-two"></div>
-        <div class="sphere-halo">
-          <div class="sphere-core">
-            <div class="sphere-shine"></div>
-            <div class="sphere-lines sphere-longitudes"></div>
-            <div class="sphere-lines sphere-latitudes"></div>
-            <div class="sphere-equator"></div>
-            <span class="sphere-letter">Z</span>
-          </div>
-        </div>
         <div class="art-label label-top"><span class="status-dot"></span> СИСТЕМА ГОТОВА</div>
         <div class="art-label label-bottom">УЗЕЛ ZENITH <b>01</b></div>
         <div class="art-coordinate">СЕКТОР 07 · КООРДИНАТЫ 001</div>
@@ -134,6 +129,6 @@
     <span class="footer-copy">НЕЗАВИСИМЫЙ ПРОЕКТ СООБЩЕСТВА · 2026</span>
     <a class="back-top" href="#top">НАВЕРХ ↑</a>
   </footer>
-  <script src="script.js?v=2.1"></script>
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>
