@@ -180,3 +180,71 @@ pre{min-height:125px;max-height:300px;overflow:auto;white-space:pre-wrap;overflo
   html{scroll-behavior:auto}
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}
 }
+
+/* Исправление визуализации сферы и более заметного фонового слоя */
+.background-canvas {
+  z-index: 1;
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+.background-grid {
+  z-index: 0;
+}
+.background-grid::after {
+  content: "";
+  position: absolute;
+  inset: -24%;
+  opacity: .34;
+  background-image:
+    radial-gradient(circle, rgba(164,255,146,.9) 0 1px, transparent 1.9px),
+    radial-gradient(circle, rgba(94,229,139,.65) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(164,255,146,.5) 0 .8px, transparent 1.7px);
+  background-size: 109px 109px, 157px 157px, 223px 223px;
+  background-position: 0 0, 37px 61px, 93px 17px;
+  animation: background-stars-drift 42s linear infinite;
+  pointer-events: none;
+}
+@keyframes background-stars-drift {
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(-109px,157px,0); }
+}
+.sphere-halo {
+  z-index: 4;
+  isolation: isolate;
+}
+.sphere-core {
+  z-index: 2;
+  display: block;
+  isolation: isolate;
+  flex: 0 0 202px;
+}
+.sphere-lines,
+.sphere-shine,
+.sphere-equator {
+  z-index: 2;
+}
+.sphere-letter {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #d4ffb6;
+  font-family: var(--mono);
+  font-size: 112px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  transform: translateY(-4px);
+  text-shadow: 0 0 12px rgba(164,255,114,.95), 0 0 34px rgba(164,255,114,.78);
+  pointer-events: none;
+}
+@media (max-width:760px) {
+  .sphere-core { flex-basis: 202px; }
+  .sphere-letter { font-size: 106px; }
+}
