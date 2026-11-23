@@ -1201,3 +1201,88 @@ body { background: #050a07; }
   .cross-one { top: 13%; left: 2%; }
   .cross-two { right: 2%; bottom: 15%; }
 }
+
+
+/* ZENITH v6.3 — широкий одноколоночный первый экран без правой панели */
+.hero {
+  display: block !important;
+  width: min(1120px, calc(100% - 48px));
+  min-height: 0;
+  padding-top: clamp(92px, 13vh, 150px);
+  padding-bottom: clamp(96px, 13vh, 148px);
+}
+.hero-content {
+  width: 100%;
+  max-width: none;
+}
+.hero .eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.hero h1 {
+  max-width: 1100px;
+  font-size: clamp(76px, 10.2vw, 142px);
+  line-height: .94;
+  letter-spacing: -.065em;
+  margin: 28px 0 32px;
+}
+.hero-description {
+  max-width: 880px;
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 1.9;
+  color: #b0c0b2;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 38px;
+}
+.hero-buttons .button {
+  min-height: 62px;
+  padding: 0 30px;
+  gap: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.hero-footnote {
+  margin-top: 36px;
+  font-size: 11px;
+  letter-spacing: .9px;
+}
+.hero-art {
+  display: none !important;
+}
+@media(max-width:760px) {
+  .hero {
+    width: min(100% - 32px, 560px);
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+  .hero h1 {
+    font-size: clamp(58px, 13.8vw, 84px);
+    letter-spacing: -.055em;
+    margin: 24px 0;
+  }
+  .hero-description {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .hero-buttons {
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .hero-buttons .button {
+    min-height: 58px;
+    padding: 0 17px;
+    gap: 14px;
+    font-size: 10px;
+  }
+  .hero-footnote {
+    font-size: 9px;
+    line-height: 1.8;
+    margin-top: 26px;
+  }
+}
